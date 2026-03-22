@@ -1,0 +1,675 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Kimcie Tech</title>
+    <link rel="stylesheet" href="jem.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+<script src="jem.js"></script>
+</head>
+<body>
+    <header>
+        <div class="container">
+            <div class="logo">
+                <svg width="200" height="60" viewBox="0 0 200 60" xmlns="http://www.w3.org/2000/svg">
+                    <defs>
+                        <linearGradient id="techGrad" x1="0%" y1="0%" x2="100%" y2="100%">
+                            <stop offset="0%" style="stop-color:#00d4ff;stop-opacity:1" />
+                            <stop offset="100%" style="stop-color:#0099cc;stop-opacity:1" />
+                        </linearGradient>
+                        <filter id="glow">
+                            <feGaussianBlur stdDeviation="2" result="coloredBlur"/>
+                            <feMerge>
+                                <feMergeNode in="coloredBlur"/>
+                                <feMergeNode in="SourceGraphic"/>
+                            </feMerge>
+                        </filter>
+                    </defs>
+                    
+                    <!-- Background -->
+                    <rect width="200" height="60" fill="#0a0e27" rx="8"/>
+                    
+                    <!-- Microchip Design Icon -->
+                    <g filter="url(#glow)">
+                        <!-- Chip outline -->
+                        <rect x="12" y="15" width="30" height="30" fill="none" stroke="url(#techGrad)" stroke-width="2" rx="2"/>
+                        
+                        <!-- Center circuit -->
+                        <circle cx="27" cy="30" r="6" fill="#00d4ff" opacity="0.8"/>
+                        <line x1="27" y1="24" x2="27" y2="12" stroke="url(#techGrad)" stroke-width="1.5"/>
+                        <line x1="27" y1="36" x2="27" y2="48" stroke="url(#techGrad)" stroke-width="1.5"/>
+                        <line x1="12" y1="30" x2="0" y2="30" stroke="url(#techGrad)" stroke-width="1.5"/>
+                        <line x1="42" y1="30" x2="54" y2="30" stroke="url(#techGrad)" stroke-width="1.5"/>
+                        
+                        <!-- Connection dots -->
+                        <circle cx="27" cy="12" r="2" fill="#00d4ff"/>
+                        <circle cx="27" cy="48" r="2" fill="#00d4ff"/>
+                        <circle cx="0" cy="30" r="2" fill="#00d4ff"/>
+                        <circle cx="54" cy="30" r="2" fill="#00d4ff"/>
+                    </g>
+                    
+                    <!-- Company Name -->
+                    <text x="75" y="32" font-family="Arial, sans-serif" font-size="14" font-weight="bold" fill="#00d4ff" letter-spacing="1">KIMCIE</text>
+                    <text x="75" y="48" font-family="Arial, sans-serif" font-size="10" fill="#0099cc" letter-spacing="2" opacity="0.9">TECH</text>
+                    
+                    <!-- Decorative accent line -->
+                    <line x1="75" y1="36" x2="140" y2="36" stroke="url(#techGrad)" stroke-width="1" opacity="0.6"/>
+                </svg>
+            </div>
+            <button class="menu-btn" aria-label="Toggle menu">
+                <i class="fas fa-bars"></i>
+            </button>
+            <nav>
+                <ul>
+                    <li><a href="#home">Home</a></li>
+                    <li><a href="#shop">Shop</a></li>
+                    <li><a href="#about">About</a></li>
+                    <li><a href="#contact">Contact</a></li>
+                    <li><a href="#details">Details</a></li>
+                </ul>
+            </nav>
+        </div>
+        <div class="header-icons">
+            <a href="#" aria-label="Search">
+                <i class="fas fa-search"></i>
+            </a>
+            <a href="#" aria-label="Account">
+                <i class="fas fa-user"></i>
+            </a>
+        </div>
+    </header>
+
+    <main>
+        <section id="home">
+            <h1>Welcome to Kimcie Tech</h1>
+            <p>Your one-stop shop for tech products.</p>
+        </section>
+
+        <section id="shop">
+            <h2>Shop</h2>
+            <div class="products">
+                <div class="product-card">
+                    <img src="https://images.unsplash.com/photo-1518770660439-4636190af475?auto=format&fit=crop&w=400&q=80" alt="ESP32 Board" class="product-image">
+                    <div class="product-info">
+                        <h2>ESP32 Serial Monitor Board</h2>
+                        <p>High-performance microcontroller with WiFi and Bluetooth.</p>
+                        <span class="price">KSH 3,379</span>
+                        <div class="product-controls">
+                            <input type="checkbox" class="product-select" data-product="ESP32 Serial Monitor Board" data-price="3379" aria-label="Select ESP32 Serial Monitor Board">
+                            <label>Qty:</label>
+                            <input type="number" class="quantity" value="1" min="1" max="10" aria-label="Quantity for ESP32 Serial Monitor Board">
+                        </div>
+                        <button class="add-to-cart">Add to Cart</button>
+                    </div>
+                </div>
+                <div class="product-card">
+                    <img src="https://images.unsplash.com/photo-1527443224154-c4a3942d3acf?auto=format&fit=crop&w=400&q=80" alt="HP 27" Curved 4K Monitor" class="product-image">
+                    <div class="product-info">
+                        <h2>HP 27" Curved 4K Monitor</h2>
+                        <p>Ultra HD curved display with vibrant colors and immersive viewing experience.</p>
+                        <span class="price">KSH 39,000</span>
+                        <div class="product-controls">
+                            <input type="checkbox" class="product-select" data-product="HP 27&quot; Curved 4K Monitor" data-price="39000" aria-label="Select HP 27&quot; Curved 4K Monitor">
+                            <label>Qty:</label>
+                            <input type="number" class="quantity" value="1" min="1" max="10" aria-label="Quantity for HP 27&quot; Curved 4K Monitor">
+                        </div>
+                        <button class="add-to-cart">Add to Cart</button>
+                    </div>
+                </div>
+                <div class="product-card">
+                    <img src="https://images.unsplash.com/photo-1517430816045-df4b7de1a5b4?auto=format&fit=crop&w=400&q=80" alt="HP 24" Full HD Monitor" class="product-image">
+                    <div class="product-info">
+                        <h2>HP 24" Full HD Monitor</h2>
+                        <p>Reliable HP display with IPS panel and built-in speakers.</p>
+                        <span class="price">KSH 25,000</span>
+                        <div class="product-controls">
+                            <input type="checkbox" class="product-select" data-product="HP 24&quot; Full HD Monitor" data-price="25000" aria-label="Select HP 24&quot; Full HD Monitor">
+                            <label>Qty:</label>
+                            <input type="number" class="quantity" value="1" min="1" max="10" aria-label="Quantity for HP 24&quot; Full HD Monitor">
+                        </div>
+                        <button class="add-to-cart">Add to Cart</button>
+                    </div>
+                </div>
+                <div class="product-card">
+                    <img src="https://images.unsplash.com/photo-1541807084-5c52b6b3adef?auto=format&fit=crop&w=400&q=80" alt="Mac Display" class="product-image">
+                    <div class="product-info">
+                        <h2>Apple Studio Display 27"</h2>
+                        <p>Premium 5K Retina display with Thunderbolt connectivity.</p>
+                        <span class="price">KSH 180,000</span>
+                        <div class="product-controls">
+                            <input type="checkbox" class="product-select" data-product="Apple Studio Display 27&quot;" data-price="180000" aria-label="Select Apple Studio Display 27&quot;">
+                            <label>Qty:</label>
+                            <input type="number" class="quantity" value="1" min="1" max="10" aria-label="Quantity for Apple Studio Display 27&quot;">
+                        </div>
+                        <button class="add-to-cart">Add to Cart</button>
+                    </div>
+                </div>
+                <div class="product-card">
+                    <img src="https://images.unsplash.com/photo-1498050108023-c5249f4df085?auto=format&fit=crop&w=400&q=80" alt="MacBook" class="product-image">
+                    <div class="product-info">
+                        <h2>MacBook Pro 16"</h2>
+                        <p>Powerful laptop with M2 chip, perfect for professionals.</p>
+                        <span class="price">KSH 325,000</span>
+                        <div class="product-controls">
+                            <input type="checkbox" class="product-select" data-product="MacBook Pro 16&quot;" data-price="325000" aria-label="Select MacBook Pro 16&quot;">
+                            <label>Qty:</label>
+                            <input type="number" class="quantity" value="1" min="1" max="10" aria-label="Quantity for MacBook Pro 16&quot;">
+                        </div>
+                        <button class="add-to-cart">Add to Cart</button>
+                    </div>
+                </div>
+                <div class="product-card">
+                    <img src="https://images.unsplash.com/photo-1588872657578-7efd1f1555ed?auto=format&fit=crop&w=400&q=80" alt="HP Laptop" class="product-image">
+                    <div class="product-info">
+                        <h2>HP Pavilion Laptop</h2>
+                        <p>Reliable laptop for everyday computing and work.</p>
+                        <span class="price">KSH 91,000</span>
+                        <div class="product-controls">
+                            <input type="checkbox" class="product-select" data-product="HP Pavilion Laptop" data-price="91000" aria-label="Select HP Pavilion Laptop">
+                            <label>Qty:</label>
+                            <input type="number" class="quantity" value="1" min="1" max="10" aria-label="Quantity for HP Pavilion Laptop">
+                        </div>
+                        <button class="add-to-cart">Add to Cart</button>
+                    </div>
+                </div>
+                <div class="product-card">
+                    <img src="https://images.unsplash.com/photo-1591488320449-011701bb6704?auto=format&fit=crop&w=400&q=80" alt="Linux PC" class="product-image">
+                    <div class="product-info">
+                        <h2>Custom Linux Desktop PC</h2>
+                        <p>Pre-installed with Ubuntu, ready for development.</p>
+                        <span class="price">KSH 117,000</span>
+                        <div class="product-controls">
+                            <input type="checkbox" class="product-select" data-product="Custom Linux Desktop PC" data-price="117000" aria-label="Select Custom Linux Desktop PC">
+                            <label>Qty:</label>
+                            <input type="number" class="quantity" value="1" min="1" max="10" aria-label="Quantity for Custom Linux Desktop PC">
+                        </div>
+                        <button class="add-to-cart">Add to Cart</button>
+                    </div>
+                </div>
+                <div class="product-card">
+                    <img src="https://images.unsplash.com/photo-1541140532154-b024d705b90a?auto=format&fit=crop&w=400&q=80" alt="RGB Gaming Keyboard" class="product-image">
+                    <div class="product-info">
+                        <h2>RGB Gaming Keyboard</h2>
+                        <p>Mechanical keyboard with customizable RGB lighting.</p>
+                        <span class="price">KSH 16,900</span>
+                        <div class="product-controls">
+                            <input type="checkbox" class="product-select" data-product="RGB Gaming Keyboard" data-price="16900" aria-label="Select RGB Gaming Keyboard">
+                            <label>Qty:</label>
+                            <input type="number" class="quantity" value="1" min="1" max="10" aria-label="Quantity for RGB Gaming Keyboard">
+                        </div>
+                        <button class="add-to-cart">Add to Cart</button>
+                    </div>
+                </div>
+                <div class="product-card">
+                    <img src="https://images.unsplash.com/photo-1587829741301-dc798b83add3?auto=format&fit=crop&w=400&q=80" alt="Wireless Keyboard" class="product-image">
+                    <div class="product-info">
+                        <h2>Wireless Ergonomic Keyboard</h2>
+                        <p>Comfortable design for long typing sessions.</p>
+                        <span class="price">KSH 11,700</span>
+                        <div class="product-controls">
+                            <input type="checkbox" class="product-select" data-product="Wireless Ergonomic Keyboard" data-price="11700" aria-label="Select Wireless Ergonomic Keyboard">
+                            <label>Qty:</label>
+                            <input type="number" class="quantity" value="1" min="1" max="10" aria-label="Quantity for Wireless Ergonomic Keyboard">
+                        </div>
+                        <button class="add-to-cart">Add to Cart</button>
+                    </div>
+                </div>
+                <div class="product-card">
+                    <img src="https://images.unsplash.com/photo-1593640408182-31c70c8268f5?auto=format&fit=crop&w=400&q=80" alt="AMOLED Screen" class="product-image">
+                    <div class="product-info">
+                        <h2>6.5" AMOLED Display</h2>
+                        <p>High contrast ratio and deep blacks for superior visuals.</p>
+                        <span class="price">KSH 26,000</span>
+                        <div class="product-controls">
+                            <input type="checkbox" class="product-select" data-product="6.5&quot; AMOLED Display" data-price="26000" aria-label="Select 6.5&quot; AMOLED Display">
+                            <label>Qty:</label>
+                            <input type="number" class="quantity" value="1" min="1" max="10" aria-label="Quantity for 6.5&quot; AMOLED Display">
+                        </div>
+                        <button class="add-to-cart">Add to Cart</button>
+                    </div>
+                </div>
+                <div class="product-card">
+                    <img src="https://images.unsplash.com/photo-1527814050087-3793815479db?auto=format&fit=crop&w=400&q=80" alt="Gaming Mouse" class="product-image">
+                    <div class="product-info">
+                        <h2>Wireless Gaming Mouse</h2>
+                        <p>High DPI sensor with customizable buttons.</p>
+                        <span class="price">KSH 10,400</span>
+                        <div class="product-controls">
+                            <input type="checkbox" class="product-select" data-product="Wireless Gaming Mouse" data-price="10400" aria-label="Select Wireless Gaming Mouse">
+                            <label>Qty:</label>
+                            <input type="number" class="quantity" value="1" min="1" max="10" aria-label="Quantity for Wireless Gaming Mouse">
+                        </div>
+                        <button class="add-to-cart">Add to Cart</button>
+                    </div>
+                </div>
+                <div class="product-card">
+                    <img src="https://images.unsplash.com/photo-1527814050087-3793815479db?auto=format&fit=crop&w=400&q=80" alt="Optical Mouse" class="product-image">
+                    <div class="product-info">
+                        <h2>Optical Office Mouse</h2>
+                        <p>Precise tracking for office and home use.</p>
+                        <span class="price">KSH 2,600</span>
+                        <div class="product-controls">
+                            <input type="checkbox" class="product-select" data-product="Optical Office Mouse" data-price="2600" aria-label="Select Optical Office Mouse">
+                            <label>Qty:</label>
+                            <input type="number" class="quantity" value="1" min="1" max="10" aria-label="Quantity for Optical Office Mouse">
+                        </div>
+                        <button class="add-to-cart">Add to Cart</button>
+                    </div>
+                </div>
+
+                <!-- Additional Mouse Brands -->
+                <div class="product-card">
+                    <img src="https://images.unsplash.com/photo-1527814050087-3793815479db?auto=format&fit=crop&w=400&q=80" alt="HP Wireless Mouse" class="product-image">
+                    <div class="product-info">
+                        <h2>HP Wireless Mouse</h2>
+                        <p>Ergonomic wireless mouse with long battery life.</p>
+                        <span class="price">KSH 4,500</span>
+                        <div class="product-controls">
+                            <input type="checkbox" class="product-select" data-product="HP Wireless Mouse" data-price="4500" aria-label="Select HP Wireless Mouse">
+                            <label>Qty:</label>
+                            <input type="number" class="quantity" value="1" min="1" max="10" aria-label="Quantity for HP Wireless Mouse">
+                        </div>
+                        <button class="add-to-cart">Add to Cart</button>
+                    </div>
+                </div>
+                <div class="product-card">
+                    <img src="https://images.unsplash.com/photo-1583394838336-acd977736f90?auto=format&fit=crop&w=400&q=80" alt="Lenovo ThinkPad Mouse" class="product-image">
+                    <div class="product-info">
+                        <h2>Lenovo ThinkPad Mouse</h2>
+                        <p>Precision laser mouse designed for business professionals.</p>
+                        <span class="price">KSH 6,200</span>
+                        <div class="product-controls">
+                            <input type="checkbox" class="product-select" data-product="Lenovo ThinkPad Mouse" data-price="6200" aria-label="Select Lenovo ThinkPad Mouse">
+                            <label>Qty:</label>
+                            <input type="number" class="quantity" value="1" min="1" max="10" aria-label="Quantity for Lenovo ThinkPad Mouse">
+                        </div>
+                        <button class="add-to-cart">Add to Cart</button>
+                    </div>
+                </div>
+                <div class="product-card">
+                    <img src="https://images.unsplash.com/photo-1615663245857-ac93bb7c39e7?auto=format&fit=crop&w=400&q=80" alt="Logitech MX Master" class="product-image">
+                    <div class="product-info">
+                        <h2>Logitech MX Master 3S</h2>
+                        <p>Advanced wireless mouse with customizable buttons and precision tracking.</p>
+                        <span class="price">KSH 12,500</span>
+                        <div class="product-controls">
+                            <input type="checkbox" class="product-select" data-product="Logitech MX Master 3S" data-price="12500" aria-label="Select Logitech MX Master 3S">
+                            <label>Qty:</label>
+                            <input type="number" class="quantity" value="1" min="1" max="10" aria-label="Quantity for Logitech MX Master 3S">
+                        </div>
+                        <button class="add-to-cart">Add to Cart</button>
+                    </div>
+                </div>
+
+                <!-- Tech Accessories -->
+                <div class="product-card">
+                    <img src="https://images.unsplash.com/photo-1560472354-b33ff0c44a43?auto=format&fit=crop&w=400&q=80" alt="Webcam" class="product-image">
+                    <div class="product-info">
+                        <h2>HD Webcam 1080p</h2>
+                        <p>Crystal clear video for streaming and video calls.</p>
+                        <span class="price">KSH 8,500</span>
+                        <div class="product-controls">
+                            <input type="checkbox" class="product-select" data-product="HD Webcam 1080p" data-price="8500" aria-label="Select HD Webcam 1080p">
+                            <label>Qty:</label>
+                            <input type="number" class="quantity" value="1" min="1" max="10" aria-label="Quantity for HD Webcam 1080p">
+                        </div>
+                        <button class="add-to-cart">Add to Cart</button>
+                    </div>
+                </div>
+                <div class="product-card">
+                    <img src="https://images.unsplash.com/photo-1590602847861-f357a9332bbc?auto=format&fit=crop&w=400&q=80" alt="USB Microphone" class="product-image">
+                    <div class="product-info">
+                        <h2>USB Condenser Microphone</h2>
+                        <p>Professional audio recording with noise cancellation.</p>
+                        <span class="price">KSH 15,000</span>
+                        <div class="product-controls">
+                            <input type="checkbox" class="product-select" data-product="USB Condenser Microphone" data-price="15000" aria-label="Select USB Condenser Microphone">
+                            <label>Qty:</label>
+                            <input type="number" class="quantity" value="1" min="1" max="10" aria-label="Quantity for USB Condenser Microphone">
+                        </div>
+                        <button class="add-to-cart">Add to Cart</button>
+                    </div>
+                </div>
+                <div class="product-card">
+                    <img src="https://images.unsplash.com/photo-1558618666-fcd25c85cd64?auto=format&fit=crop&w=400&q=80" alt="HDMI Cable" class="product-image">
+                    <div class="product-info">
+                        <h2>HDMI 2.0 Cable 2M</h2>
+                        <p>High-speed HDMI cable for 4K displays and gaming.</p>
+                        <span class="price">KSH 2,200</span>
+                        <div class="product-controls">
+                            <input type="checkbox" class="product-select" data-product="HDMI 2.0 Cable 2M" data-price="2200" aria-label="Select HDMI 2.0 Cable 2M">
+                            <label>Qty:</label>
+                            <input type="number" class="quantity" value="1" min="1" max="10" aria-label="Quantity for HDMI 2.0 Cable 2M">
+                        </div>
+                        <button class="add-to-cart">Add to Cart</button>
+                    </div>
+                </div>
+                <div class="product-card">
+                    <img src="https://images.unsplash.com/photo-1625842268584-8f3296236761?auto=format&fit=crop&w=400&q=80" alt="Power Bank" class="product-image">
+                    <div class="product-info">
+                        <h2>20000mAh Power Bank</h2>
+                        <p>High-capacity portable charger for all your devices.</p>
+                        <span class="price">KSH 7,500</span>
+                        <div class="product-controls">
+                            <input type="checkbox" class="product-select" data-product="20000mAh Power Bank" data-price="7500" aria-label="Select 20000mAh Power Bank">
+                            <label>Qty:</label>
+                            <input type="number" class="quantity" value="1" min="1" max="10" aria-label="Quantity for 20000mAh Power Bank">
+                        </div>
+                        <button class="add-to-cart">Add to Cart</button>
+                    </div>
+                </div>
+
+                <!-- Audio Equipment -->
+                <div class="product-card">
+                    <img src="https://images.unsplash.com/photo-1608043152269-423dbba4e7e1?auto=format&fit=crop&w=400&q=80" alt="Bluetooth Speakers" class="product-image">
+                    <div class="product-info">
+                        <h2>JBL GO 3 Portable Speaker</h2>
+                        <p>Waterproof wireless speaker with powerful sound.</p>
+                        <span class="price">KSH 9,500</span>
+                        <div class="product-controls">
+                            <input type="checkbox" class="product-select" data-product="JBL GO 3 Portable Speaker" data-price="9500" aria-label="Select JBL GO 3 Portable Speaker">
+                            <label>Qty:</label>
+                            <input type="number" class="quantity" value="1" min="1" max="10" aria-label="Quantity for JBL GO 3 Portable Speaker">
+                        </div>
+                        <button class="add-to-cart">Add to Cart</button>
+                    </div>
+                </div>
+                <div class="product-card">
+                    <img src="https://images.unsplash.com/photo-1484704849700-f032a568e944?auto=format&fit=crop&w=400&q=80" alt="Gaming Headset" class="product-image">
+                    <div class="product-info">
+                        <h2>Razer BlackShark Gaming Headset</h2>
+                        <p>Professional gaming headset with 7.1 surround sound.</p>
+                        <span class="price">KSH 18,000</span>
+                        <div class="product-controls">
+                            <input type="checkbox" class="product-select" data-product="Razer BlackShark Gaming Headset" data-price="18000" aria-label="Select Razer BlackShark Gaming Headset">
+                            <label>Qty:</label>
+                            <input type="number" class="quantity" value="1" min="1" max="10" aria-label="Quantity for Razer BlackShark Gaming Headset">
+                        </div>
+                        <button class="add-to-cart">Add to Cart</button>
+                    </div>
+                </div>
+                <div class="product-card">
+                    <img src="https://images.unsplash.com/photo-1590658268037-6bf12165a8df?auto=format&fit=crop&w=400&q=80" alt="Studio Headphones" class="product-image">
+                    <div class="product-info">
+                        <h2>Sony WH-1000XM4 Headphones</h2>
+                        <p>Premium noise-canceling wireless headphones.</p>
+                        <span class="price">KSH 35,000</span>
+                        <div class="product-controls">
+                            <input type="checkbox" class="product-select" data-product="Sony WH-1000XM4 Headphones" data-price="35000" aria-label="Select Sony WH-1000XM4 Headphones">
+                            <label>Qty:</label>
+                            <input type="number" class="quantity" value="1" min="1" max="10" aria-label="Quantity for Sony WH-1000XM4 Headphones">
+                        </div>
+                        <button class="add-to-cart">Add to Cart</button>
+                    </div>
+                </div>
+                <div class="product-card">
+                    <img src="https://images.unsplash.com/photo-1545127398-14699f92334b?auto=format&fit=crop&w=400&q=80" alt="Computer Speakers" class="product-image">
+                    <div class="product-info">
+                        <h2>Logitech Z313 Speaker System</h2>
+                        <p>2.1 channel speaker system with subwoofer.</p>
+                        <span class="price">KSH 12,000</span>
+                        <div class="product-controls">
+                            <input type="checkbox" class="product-select" data-product="Logitech Z313 Speaker System" data-price="12000" aria-label="Select Logitech Z313 Speaker System">
+                            <label>Qty:</label>
+                            <input type="number" class="quantity" value="1" min="1" max="10" aria-label="Quantity for Logitech Z313 Speaker System">
+                        </div>
+                        <button class="add-to-cart">Add to Cart</button>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <section id="cart">
+            <h2>Shopping Cart</h2>
+            <div id="cart-items">
+                <p>Your cart is empty</p>
+            </div>
+            <div id="cart-total">
+                <p>Total: KSH 0</p>
+            </div>
+            <button id="checkout-btn">Proceed to Checkout</button>
+        </section>
+
+        <section id="checkout">
+            <h2>Checkout & Delivery</h2>
+            <form id="checkout-form">
+                <div class="form-group">
+                    <label for="name">Full Name:</label>
+                    <input type="text" id="name" required>
+                </div>
+                <div class="form-group">
+                    <label for="email">Email:</label>
+                    <input type="email" id="email" required>
+                </div>
+                <div class="form-group">
+                    <label for="phone">Phone Number:</label>
+                    <input type="tel" id="phone" required>
+                </div>
+                <div class="form-group">
+                    <label for="address">Delivery Address:</label>
+                    <textarea id="address" required></textarea>
+                </div>
+                <div class="form-group">
+                    <label for="delivery-method">Delivery Method:</label>
+                    <select id="delivery-method" required>
+                        <option value="">Select delivery method</option>
+                        <option value="standard">Standard Delivery (KSH 500) - 3-5 days</option>
+                        <option value="express">Express Delivery (KSH 1,000) - 1-2 days</option>
+                        <option value="pickup">Store Pickup (Free) - Same day</option>
+                    </select>
+                </div>
+                <div class="form-group">
+                    <label for="payment-method">Payment Method:</label>
+                    <select id="payment-method" required>
+                        <option value="">Select payment method</option>
+                        <option value="mpesa">M-Pesa</option>
+                        <option value="card">Credit/Debit Card</option>
+                        <option value="bank">Bank Transfer</option>
+                        <option value="cash">Cash on Delivery</option>
+                    </select>
+                </div>
+                <button type="submit">Complete Purchase</button>
+            </form>
+        </section>
+
+        <section id="about">
+            <h2>About Us</h2>
+            <div class="about-content">
+                <div class="about-text">
+                    <h3>Welcome to Kimcie Tech</h3>
+                    <p>Kimcie Tech is your premier destination for cutting-edge technology products in Kenya. We specialize in providing high-quality tech solutions for developers, professionals, gamers, and everyday users.</p>
+
+                    <h3>Our Products</h3>
+                    <p>We offer a comprehensive range of technology products including:</p>
+                    <ul>
+                        <li><strong>Development Boards:</strong> ESP32 microcontroller boards for IoT projects and embedded systems development</li>
+                        <li><strong>Display Solutions:</strong> High-resolution monitors and AMOLED screens for superior visual experience</li>
+                        <li><strong>Computing Devices:</strong> Mac, HP, and Linux computers and laptops for various computing needs</li>
+                        <li><strong>Peripherals:</strong> Gaming and ergonomic keyboards, wireless and optical mice from HP, Lenovo, Logitech, and more</li>
+                        <li><strong>Tech Accessories:</strong> Webcams, microphones, HDMI cables, power banks for complete setups</li>
+                        <li><strong>Audio Equipment:</strong> Bluetooth speakers, gaming headsets, studio headphones, and speaker systems</li>
+                        <li><strong>Ergonomic Seating:</strong> Gaming chairs and bucket seats with headrests (Secretlab, DXRacer, AndaSeat, Razer)</li>
+                    </ul>
+
+                    <h3>Why Choose Kimcie Tech?</h3>
+                    <ul>
+                        <li><strong>Quality Assurance:</strong> All products are sourced from reputable manufacturers and undergo quality checks</li>
+                        <li><strong>Competitive Pricing:</strong> Best prices in KSH for Kenyan customers</li>
+                        <li><strong>Expert Support:</strong> Technical assistance and guidance for your tech needs</li>
+                        <li><strong>Fast Delivery:</strong> Quick and reliable shipping across Kenya</li>
+                        <li><strong>Local Expertise:</strong> Understanding of Kenyan market and customer requirements</li>
+                    </ul>
+
+                    <h3>Our Mission</h3>
+                    <p>To democratize access to advanced technology in Kenya by providing affordable, high-quality tech products and fostering innovation through education and support.</p>
+
+                    <h3>Our Vision</h3>
+                    <p>To be Kenya's leading technology retailer, empowering individuals and businesses with the tools they need to thrive in the digital age.</p>
+
+                    <h3>Customer Satisfaction</h3>
+                    <p>At Kimcie Tech, customer satisfaction is our top priority. We strive to provide exceptional service, from product selection to after-sales support. Our team of tech enthusiasts is always ready to help you find the perfect solution for your needs.</p>
+                </div>
+            </div>
+        </section>
+
+        <section id="contact">
+            <h2>Contact</h2>
+            <p>Phone No: +254 757 872 636</p>
+                <p>Email:collinskimutai55109@gmail.com</p>
+                <p>Github: https://github.com/collinskimcie</p>
+                <p>LinkedIn: www.linkedin.com/in/collins-kimutai-4b3483383</p>
+        </section>
+
+        <section id="details">
+            <h2>Details</h2>
+            <p>More information about our services.</p>
+        </section>
+    </main>
+
+    <script>
+        // Shopping Cart Functionality
+        let cart = [];
+        let cartTotal = 0;
+
+        // Add to cart functionality
+        document.querySelectorAll('.add-to-cart').forEach(button => {
+            button.addEventListener('click', function() {
+                const productCard = this.closest('.product-card');
+                const checkbox = productCard.querySelector('.product-select');
+                const quantityInput = productCard.querySelector('.quantity');
+
+                if (!checkbox.checked) {
+                    alert('Please select the product first!');
+                    return;
+                }
+
+                const product = checkbox.dataset.product;
+                const price = parseInt(checkbox.dataset.price);
+                const quantity = parseInt(quantityInput.value);
+
+                // Check if product already in cart
+                const existingItem = cart.find(item => item.product === product);
+                if (existingItem) {
+                    existingItem.quantity += quantity;
+                    existingItem.totalPrice += price * quantity;
+                } else {
+                    cart.push({
+                        product: product,
+                        price: price,
+                        quantity: quantity,
+                        totalPrice: price * quantity
+                    });
+                }
+
+                updateCartDisplay();
+                alert(`${quantity} ${product}(s) added to cart!`);
+            });
+        });
+
+        // Update cart display
+        function updateCartDisplay() {
+            const cartItems = document.getElementById('cart-items');
+            const cartTotalElement = document.getElementById('cart-total');
+            const checkoutBtn = document.getElementById('checkout-btn');
+
+            if (cart.length === 0) {
+                cartItems.innerHTML = '<p>Your cart is empty</p>';
+                cartTotalElement.innerHTML = '<p>Total: KSH 0</p>';
+                checkoutBtn.style.display = 'none';
+                return;
+            }
+
+            let itemsHTML = '<ul>';
+            cartTotal = 0;
+
+            cart.forEach((item, index) => {
+                itemsHTML += `
+                    <li>
+                        ${item.product} - Qty: ${item.quantity} - KSH ${item.totalPrice.toLocaleString()}
+                        <button onclick="removeFromCart(${index})">Remove</button>
+                    </li>
+                `;
+                cartTotal += item.totalPrice;
+            });
+
+            itemsHTML += '</ul>';
+            cartItems.innerHTML = itemsHTML;
+            cartTotalElement.innerHTML = `<p>Total: KSH ${cartTotal.toLocaleString()}</p>`;
+            checkoutBtn.style.display = 'block';
+        }
+
+        // Remove from cart
+        function removeFromCart(index) {
+            cart.splice(index, 1);
+            updateCartDisplay();
+        }
+
+        // Checkout functionality
+        document.getElementById('checkout-btn').addEventListener('click', function() {
+            document.getElementById('checkout').style.display = 'block';
+            document.getElementById('checkout').scrollIntoView({ behavior: 'smooth' });
+        });
+
+        // Form submission
+        document.getElementById('checkout-form').addEventListener('submit', function(e) {
+            e.preventDefault();
+
+            const formData = {
+                name: document.getElementById('name').value,
+                email: document.getElementById('email').value,
+                phone: document.getElementById('phone').value,
+                address: document.getElementById('address').value,
+                deliveryMethod: document.getElementById('delivery-method').value,
+                paymentMethod: document.getElementById('payment-method').value,
+                cart: cart,
+                total: cartTotal
+            };
+
+            // Calculate delivery cost
+            let deliveryCost = 0;
+            if (formData.deliveryMethod === 'standard') deliveryCost = 500;
+            else if (formData.deliveryMethod === 'express') deliveryCost = 1000;
+
+            const finalTotal = cartTotal + deliveryCost;
+
+            // Display order summary
+            let orderSummary = `
+                <h3>Order Confirmation</h3>
+                <p><strong>Customer:</strong> ${formData.name}</p>
+                <p><strong>Email:</strong> ${formData.email}</p>
+                <p><strong>Phone:</strong> ${formData.phone}</p>
+                <p><strong>Delivery Address:</strong> ${formData.address}</p>
+                <p><strong>Delivery Method:</strong> ${document.getElementById('delivery-method').options[document.getElementById('delivery-method').selectedIndex].text}</p>
+                <p><strong>Payment Method:</strong> ${document.getElementById('payment-method').options[document.getElementById('payment-method').selectedIndex].text}</p>
+
+                <h4>Items Ordered:</h4>
+                <ul>
+            `;
+
+            cart.forEach(item => {
+                orderSummary += `<li>${item.product} - Qty: ${item.quantity} - KSH ${item.totalPrice.toLocaleString()}</li>`;
+            });
+
+            orderSummary += `
+                </ul>
+                <p><strong>Subtotal:</strong> KSH ${cartTotal.toLocaleString()}</p>
+                <p><strong>Delivery:</strong> KSH ${deliveryCost.toLocaleString()}</p>
+                <p><strong>Final Total:</strong> KSH ${finalTotal.toLocaleString()}</p>
+
+                <p style="color: green; font-weight: bold;">Thank you for your order! We will contact you shortly to confirm payment and delivery details.</p>
+            `;
+
+            document.getElementById('checkout').innerHTML = orderSummary;
+
+            // Clear cart
+            cart = [];
+            updateCartDisplay();
+
+            // Reset form
+            this.reset();
+        });
+    </script>
+
+</body>
+</html>
